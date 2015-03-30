@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Google Maps :: Multiple Geolocation Markers</title>
+    
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!--<script type="text/javascript" src="js/bootstrap.min.js"></script>-->
+    <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="page-header well well-sm">
+        <h3>Assignment on :: Google Maps Multiple Geolocation Markers</h3>
+        <p>M.Sc. of PMIT , IT-6231: Advanced Web Technology</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS.</h3>
+          </div>
+          <div class="panel-body">
+            <div class="col-md-6">
+              <div id="map" style="height: 400px; width: 500px;" ></div>
+            </div>
+            <div class="col-md-6">
+                <div id="map1" style="height: 400px; width: 500px; float:left"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- <div style="width:1005px; padding-left:15%;">
+    	<div id="map" style="height: 400px; width: 500px; float:left"></div>
+  	<div id="map1" style="height: 400px; width: 500px; float:right; margin-left:5px;"></div>
+  </div> -->
+    <script type="text/javascript">
+      /*var locations = [
+        ['Fish&amp;Co.', 23.777159, 90.416879, 3], 
+        ['PizzaHat', 23.776329, 90.416729, 2], 
+        ['exim', 23.775652, 90.416600, 1] 
+      ];*/
+      /* location array object */
+      var locations = [
+      	{
+      		'name': 'Star Kabab, Dhanmondi, Dhaka',
+      		'lat' : 23.747419,
+      		'lon' : 90.370638
+      	},
+      	{
+      		'name': 'City College, Dhanmondi, Dhaka',
+      		'lat' : 23.739901,
+      		'lon' : 90.382728
+      	},
+      	{
+      		'name': 'New Market, Dhaka',
+      		'lat' : 23.733547,
+      		'lon' : 90.38393
+      	},
+        {
+          'name': 'Lab Aid, Dhanmondi, Dhaka',
+          'lat' : 23.741826,
+          'lon' : 90.383479
+        },
+      ];
+  	
+  	var infowindow = new google.maps.InfoWindow();
+  	var marker, i, centerLat,centerLong,sumLat=0,sumLong=0;
+
+    for(i=0; i < locations.length; i++ ){
+      sumLat += locations[i].lat;
+      sumLong += locations[i].lon;
+    }
+
+    centerLat = sumLat / locations.length;
+    centerLong = sumLong / locations.length;
+  	
+  	//----------View map road map---------//
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 14,
+        center: new google.maps.LatLng(centerLat, centerLong), 
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
+  	
+  	//----------Add marker to map------------//
+  	
+      for (i = 0; i < locations.length; i++) { 
+        marker = new google.maps.Marker({
+          position: new google.maps.LatLng(locations[i].lat, locations[i].lon),
+          map: map
+        });
+
+        google.maps.event.addListener(marker, 'mouseover', (function(marker, i) {
+          return function() {
+            infowindow.setContent(locations[i].name);
+            infowindow.open(map, marker);
+  		  }
+        })(marker, i));
+      }
+  	//-----------View map SATELLITE-----------/
+   	var map1 = new google.maps.Map(document.getElementById('map1'), {
+        zoom: 14,
+        center: new google.maps.LatLng(centerLat, centerLong),
+        mapTypeId: google.maps.MapTypeId.HYBRID  //HYBRID  //SATELLITE //TERRAIN
+      });
+  	
+  	//----------Add marker to map------------//
+  	
+  	for (i = 0; i < locations.length; i++) { 
+        marker = new google.maps.Marker({
+          position: new google.maps.LatLng(locations[i].lat, locations[i].lon),
+          map: map1
+        });
+
+        google.maps.event.addListener(marker, 'mouseover', (function(marker, i) {
+          return function() {
+            infowindow.setContent(locations[i].name);
+            infowindow.open(map1, marker);
+  		  }
+        })(marker, i));
+      }
+    </script>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">Fariha Jabin @ JU.</p>
+      </div>
+    </footer>
+
+  </body>
+</html>
