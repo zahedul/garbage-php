@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>NEWS PORTAL</title>
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+          <link href="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+        <script src="js/modernizr.custom.js"></script>
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- The default timeline stylesheet -->
+        <link rel="stylesheet" href="assets/css/timeline.css" />
+        <!-- Our customizations to the theme -->
+        <link rel="stylesheet" href="assets/css/styles.css" />
+
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Dancing+Script|Antic+Slab" />
+
+        <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+            <h3>Menu</h3>
+            <a href="javascript:void(0);">Celery seakale</a>
+            <a href="javascript:void(0);">Dulse daikon</a>
+            <a href="javascript:void(0);">Zucchini garlic</a>
+            <a href="javascript:void(0);">Catsear azuki bean</a>
+            <a href="javascript:void(0);">Dandelion bunya</a>
+            <a href="javascript:void(0);">Rutabaga</a>
+        </nav>
+        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s2">
+            <h3>Filter</h3>
+            <a href="javascript:void(0);">Celery seakale</a>
+            <a href="javascript:void(0);">Dulse daikon</a>
+            <a href="javascript:void(0);">Zucchini garlic</a>
+            <a href="javascript:void(0);">Catsear azuki bean</a>
+            <a href="javascript:void(0);">Dandelion bunya</a>
+            <a href="javascript:void(0);">Rutabaga</a>
+        </nav>
+        <header class="container-fluid header-div">
+            <div class="col-lg-12">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 padding-5x">
+                    <div class="menu-bar">
+                        <button id="showMenu" class="btn-menu-top"><i class="fa fa-bars fa-2x"></i></button>
+                        <button id="showFilter" class="btn-menu-top"><i class="fa fa-filter fa-2x"></i></button>
+                    </div>
+                    <div class="logo-txt">Headline Monitor</div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 expand-div">
+                    **The news that are shown are released between "10:00 (PM)" **
+                    <button id="showFilter" class="btn-menu-top pull-right requestfullscreen"><i class="fa fa-expand fa-2x"></i></button>
+                    <button id="showFilter" class="btn-menu-top pull-right exitfullscreen" style="display: none"><i class="fa fa-compress fa-2x"></i></button>
+                </div>
+            </div> 
+        </header>
+                
+       
+        
+        <div class="container-fluid">
+            <h2 class="text-center top-heading top-heading-margin">Top headlines</h2>
+            <a href="javascript:void(0)" id="slide-button" style="float: right; font-size: 16px;"> <i class="fa fa-chevron-down"></i></a> <br /> 
+            
+            <div id="top-headline-area">
+                <div class="col-md-3 ">
+                    <div class="row news-single no-margin">
+                        <h3 class="title">News title</h3>
+                        <div class="img-container-single">
+                            <img class="img-responsive" src="./images/demo.png">
+                        </div>
+                        <div class="details-container">
+                            <p><a class="site-address pull-right" href="#">example.com</a></p>
+                            <p><i class="fa fa-edit"></i>Related news:46</p>
+                            <p><i class="fa fa-line-chart"></i>News score:33</p>
+                            <p class="red"><i class="fa fa-bars red"></i>32,448</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 ">
+                    <div class="row news-single no-margin">
+                        <h3 class="title">News title</h3>
+                        <div class="img-container-single">
+                            <img class="img-responsive" src="./images/demo.png">
+                        </div>
+                        <div class="details-container">
+                            <p><a class="site-address pull-right" href="#">example.com</a></p>
+                            <p><i class="fa fa-edit"></i>Related news:46</p>
+                            <p><i class="fa fa-line-chart"></i>News score:33</p>
+                            <p class="red"><i class="fa fa-bars red"></i>32,448</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 ">
+                    <div class="row news-single no-margin">
+                        <h3 class="title">News title</h3>
+                        <div class="img-container-single">
+                            <img class="img-responsive" src="./images/demo.png">
+                        </div>
+                        <div class="details-container">
+                            <p><a class="site-address pull-right" href="#">example.com</a></p>
+                            <p><i class="fa fa-edit"></i>Related news:46</p>
+                            <p><i class="fa fa-line-chart"></i>News score:33</p>
+                            <p class="red"><i class="fa fa-bars red"></i>32,448</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 ">
+                    <div class="row news-single no-margin">
+                        <h3 class="title">News title</h3>
+                        <div class="img-container-single">
+                            <img class="img-responsive" src="./images/demo.png">
+                        </div>
+                        <div class="details-container">
+                            <p><a class="site-address pull-right" href="#">example.com</a></p>
+                            <p><i class="fa fa-edit"></i>Related news:46</p>
+                            <p><i class="fa fa-line-chart"></i>News score:33</p>
+                            <p class="red"><i class="fa fa-bars red"></i>32,448</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid stats-container">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="col-md-4 no-padding news-stat">
+                            <p><i class="fa fa-calculator"></i> Related news count:2400</p>
+                        </div>
+                        <div class="col-md-4 no-padding news-stat">
+                            <p><i class="fa fa-tachometer"></i>Read count:32,000</p>
+                        </div>
+                        <div class="col-md-4 no-padding news-stat">
+                            <p><i class="fa fa-bar-chart"></i>Rate of news: 68%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid time-container">
+            <div id="timeline" class="container-fluid">
+                <!-- Timeline.js will genereate the markup here -->
+            </div>
+        </div>
+
+        
+        <!-- start Graph Section -->
+        <div class="container-fluid graph-container">
+            <div class="col-md-12">
+                <div class="ct-chart"></div>
+                <div class="graph-label">
+                    <p><span class="graph-line-red"></span> Topic</p>
+                    <p><span class="graph-line-green"></span> Subtopic</p>
+                </div> 
+            </div>
+        </div>
+        <!-- End Graph Section -->
+        
+
+        <!-- JavaScript includes - jQuery, turn.js and our own script.js -->
+        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script src="assets/js/timeline.js"></script>
+        <script src="assets/js/script.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/classie.js"></script>
+        <script src="js/jquery.fullscreen.min.js"></script>
+        <script src="js/jquery.tooltipster.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                $('.tooltip').tooltipster({
+                    position: 'bottom',
+                    trigger: 'hover',
+                    content: $('<p class="txt-small"><strong>Onceki Pozisyonlar</strong></p>\n\
+                                <p class="txt-small"><span>Ana Sayfa 10. Bolum 57 dk.</span></p>\n\
+                                <p class="txt-small"><span>Ana Sayfa 7. Bolum 120 dk.</span></p>\n\
+                                <p class="txt-small"><span>Manset 20. Sira 45dk.</span></p>\n\
+                                <p class="txt-small ex-margin"><span>Yayinlanma Saati: 10:04</span></p>')
+                });
+                $('.gear-box').tooltipster({
+                    position: 'bottom',
+                    interactive: 'true',
+                    autoClose: 'false',
+                    trigger: 'click',
+                    content: $('<div class="gear-cont"><div class="row no-margin"><div class="checkbox dis-b" style="line-height:20px;">\n\
+        \n\
+        <label><input type="checkbox" value="">Lipsum text</label></div><div class="form-group"><select  class="form-control" style="width:100%;"><option>Demo text</option></select></div></div>')
+                });
+            });
+        </script>
+        <script>
+            var menuLeft = document.getElementById('cbp-spmenu-s1'),
+                    menuFilter = document.getElementById('cbp-spmenu-s2'),
+                    showManu = document.getElementById('showMenu'),
+                    showFilter = document.getElementById('showFilter'),
+                    body = document.body;
+
+            showMenu.onclick = function() {
+                classie.toggle(this, 'active');
+                classie.toggle(menuLeft, 'cbp-spmenu-open');
+                disableOther('showMenu');
+            };
+            showFilter.onclick = function() {
+                classie.toggle(this, 'active');
+                classie.toggle(menuFilter, 'cbp-spmenu-open');
+                disableOther('showFilter');
+            };
+
+            function disableOther(button) {
+                if (button !== 'showMenu') {
+                    //classie.toggle(showMenu, 'disabled');
+                }
+                if (button !== 'showFilter') {
+                    //classie.toggle(showFilter, 'disabled');
+                }
+            }
+        </script>
+        <script type="text/javascript">
+            $(function() {
+                // check native support
+                $('#support').text($.fullscreen.isNativelySupported() ? 'supports' : 'doesn\'t support');
+
+                // open in fullscreen
+                $('#fullscreen .requestfullscreen').click(function() {
+                    $('#fullscreen').fullscreen();
+                    return false;
+                });
+
+                // exit fullscreen
+                $('#fullscreen .exitfullscreen').click(function() {
+                    $.fullscreen.exit();
+                    return false;
+                });
+
+                // document's event
+                $(document).bind('fscreenchange', function(e, state, elem) {
+                    // if we currently in fullscreen mode
+                    if ($.fullscreen.isFullScreen()) {
+                        $('#fullscreen .requestfullscreen').hide();
+                        $('#fullscreen .exitfullscreen').show();
+                    } else {
+                        $('#fullscreen .requestfullscreen').show();
+                        $('#fullscreen .exitfullscreen').hide();
+                    }
+
+                    $('#state').text($.fullscreen.isFullScreen() ? '' : 'not');
+                });
+            });
+//            $('.editData').on("click",function(){
+//                $(this).parent().parent().find('.domain-field').removeAttr('disabled');
+//                $(this).parent().parent().find('.saveData').show();
+//                $(this).hide();
+//            });
+//            $('.saveData').on("click",function(){
+//                $(this).parent().parent().find('.domain-field').attr('disabled','disabled');
+//                $(this).parent().parent().find('.editData').show();
+//                $(this).hide();
+//            });
+        </script>
+        <!--        <script>
+                    var blah = '<p>This is a simple text</p>';
+                    $('#popover1').popover({placement: 'right', title: 'title', content: blah, html: true});
+                </script>-->
+        
+    
+  <!-- JS for Graph--> 
+  <script src="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+  
+  <script>
+       
+         // Graph  
+        new Chartist.Line('.ct-chart', {
+            labels: ['10 Ocak', '11 Ocak', '12 Ocak', '13 Ocak', '14 Ocak', '15 Ocak', '16 Ocak' ],
+            series: [
+              {
+                name: 'Fibonacci sequence',
+                data:  [4000, 2200, 6200, 7000, 4000, 4500, 5800, 5400]
+              },
+              {
+                name: 'Golden section',
+                data: [2500, 1800, 4500, 2000, 3400, 2500, 3800, 2800],
+              }
+            ]
+          });
+
+          var $chart = $('.ct-chart');
+
+          var $toolTip = $chart
+            .append('<div class="tooltip"></div>')
+            .find('.tooltip')
+            .hide();
+
+          $chart.on('mouseenter', '.ct-point', function() {
+            var $point = $(this),
+              value = $point.attr('ct:value'),
+              seriesName = $point.parent().attr('ct:series-name');
+            $toolTip.html(seriesName + '<br>' + value).show();
+          });
+
+          $chart.on('mouseleave', '.ct-point', function() {
+            $toolTip.hide();
+          });
+
+          $chart.on('mousemove', function(event) {
+            $toolTip.css({
+              left: (event.offsetX || event.originalEvent.layerX) - $toolTip.width() / 2 - 10,
+              top: (event.offsetY || event.originalEvent.layerY) - $toolTip.height() - 40
+            });
+          });
+          
+          
+        // Top headline slide
+       $("#slide-button" ).click(function() {
+          $( "#top-headline-area" ).slideToggle();
+        });
+
+  </script>
+  
+    </body>
+</html>
