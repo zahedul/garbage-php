@@ -2,7 +2,8 @@
 $servername = "localhost";
 $username = "root";
 $password = "root";
-$dbName = 'easyservice';
+//$dbName = 'easyservice';
+$dbName = 'event_manager';
 
 try {
     $pdo = new PDO("mysql:host=$servername;dbname=$dbName", $username, $password);

@@ -1,5 +1,16 @@
 <?php
-include_once 'database.php';
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbName = 'event_manager';
+
+try {
+    $pdo = new PDO("mysql:host=$servername;dbname=$dbName", $username, $password);
+    // set the PDO error mode to exception
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
+}
 
 function makeHashPassword($password) {
 	$work = str_pad(8, 2, '0', STR_PAD_LEFT);
@@ -73,10 +84,10 @@ if(!empty($jsonData)){
 		$lastname = $data['lastname'];
         $email = $data['email'];
         $password = $em[0];        
-        $phonenumber = $data['phonenumber'];
+        $phonenumber = $data['phone'];
         $company = $data['company'];
         $role = $data['role'];
-        $type = $data['type'];
+        $type = $type;
 
         $stmt->execute(); 
         echo $pdo->lastInsertId().'<br />';
